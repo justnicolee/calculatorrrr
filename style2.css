@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+}
+#calculator{
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 350px;
+    overflow: hidden;
+}
+#display{
+    width: 100%;
+    height: 70px;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 10px 15px;
+    font-size: 2rem;
+    overflow-x: auto;
+    direction: ltr; 
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 15px;
+}
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+button:active{
+    background-color: hsl(0, 0%, 50%);
+}
+.operator-btn{
+    background-color: hsl(234, 30%, 50%);
+}
+.operator-btn:hover{
+    background-color: hsl(237, 43%, 65%);
+}
+.operator-btn:active{
+    background-color: hsl(237, 43%, 65%);
+}
+/* Keep all your original styles, and append this at the bottom */
+
+.clear-btn {
+    grid-column: span 4; /* Spans across all 4 columns */
+    width: auto;         /* Breaks the 50px constraint to fill space */
+    border-radius: 15px; /* Looks better as a rectangle with slightly rounded edges */
+    height: 50px;        /* Matches the height of other buttons */
+}
